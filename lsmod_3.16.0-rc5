@@ -1,0 +1,103 @@
+Module                  Size  Used by
+rfcomm                 69427  12 
+fuse                   91406  3 
+ccm                    17773  1 
+ip6t_rpfilter          12546  1 
+ip6t_REJECT            12939  2 
+xt_conntrack           12760  12 
+ebtable_nat            12807  0 
+ebtable_broute         12731  0 
+bridge                116006  1 ebtable_broute
+stp                    12868  1 bridge
+llc                    13941  2 stp,bridge
+ebtable_filter         12827  0 
+ebtables               30758  3 ebtable_broute,ebtable_nat,ebtable_filter
+ip6table_nat           12974  1 
+nf_conntrack_ipv6      18738  7 
+nf_defrag_ipv6         34712  1 nf_conntrack_ipv6
+nf_nat_ipv6            13213  1 ip6table_nat
+ip6table_mangle        12700  1 
+ip6table_security      12710  1 
+ip6table_raw           12683  1 
+ip6table_filter        12815  1 
+ip6_tables             26809  5 ip6table_filter,ip6table_mangle,ip6table_security,ip6table_nat,ip6table_raw
+iptable_nat            12970  1 
+nf_conntrack_ipv4      14656  7 
+nf_defrag_ipv4         12702  1 nf_conntrack_ipv4
+nf_nat_ipv4            13199  1 iptable_nat
+nf_nat                 25178  4 nf_nat_ipv4,nf_nat_ipv6,ip6table_nat,iptable_nat
+nf_conntrack           99420  8 nf_nat,nf_nat_ipv4,nf_nat_ipv6,xt_conntrack,ip6table_nat,iptable_nat,nf_conntrack_ipv4,nf_conntrack_ipv6
+iptable_mangle         12695  1 
+iptable_security       12705  1 
+iptable_raw            12678  1 
+bnep                   19624  2 
+arc4                   12608  2 
+ath9k                 136757  0 
+ath9k_common           24449  1 ath9k
+ath9k_hw              435606  2 ath9k_common,ath9k
+ath                    28211  3 ath9k_common,ath9k,ath9k_hw
+mac80211              623787  1 ath9k
+x86_pkg_temp_thermal    14205  0 
+coretemp               13441  0 
+kvm_intel             147547  0 
+kvm                   452677  1 kvm_intel
+snd_hda_codec_hdmi     47489  1 
+ath3k                  13331  0 
+btusb                  32448  0 
+nfsd                  283833  1 
+snd_hda_codec_realtek    72791  1 
+snd_hda_codec_generic    67662  1 snd_hda_codec_realtek
+bluetooth             434032  33 bnep,ath3k,btusb,rfcomm
+uvcvideo               81022  0 
+snd_hda_intel          30379  4 
+cfg80211              500115  4 ath,ath9k_common,ath9k,mac80211
+snd_hda_controller     30139  1 snd_hda_intel
+auth_rpcgss            58761  1 nfsd
+videobuf2_vmalloc      13163  1 uvcvideo
+videobuf2_memops       13161  1 videobuf2_vmalloc
+snd_hda_codec         131298  5 snd_hda_codec_realtek,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_intel,snd_hda_controller
+nfs_acl                12741  1 nfsd
+videobuf2_core         57175  1 uvcvideo
+snd_hwdep              17650  1 snd_hda_codec
+v4l2_common            14542  1 videobuf2_core
+iTCO_wdt               13480  0 
+iTCO_vendor_support    13419  1 iTCO_wdt
+snd_seq                62266  0 
+lockd                  93436  1 nfsd
+videodev              147660  3 uvcvideo,v4l2_common,videobuf2_core
+shpchp                 37047  0 
+sunrpc                279214  5 nfsd,auth_rpcgss,lockd,nfs_acl
+lpc_ich                21093  0 
+snd_seq_device         14136  1 snd_seq
+snd_pcm               104333  4 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel,snd_hda_controller
+mfd_core               13182  1 lpc_ich
+samsung_laptop         14620  0 
+media                  20846  2 uvcvideo,videodev
+i2c_i801               18146  0 
+serio_raw              13434  0 
+snd_timer              28778  2 snd_pcm,snd_seq
+pcspkr                 12718  0 
+microcode              20134  0 
+tpm_infineon           17131  0 
+tpm_tis                18484  0 
+mei_me                 19568  0 
+joydev                 17344  0 
+rfkill                 21979  7 cfg80211,samsung_laptop,bluetooth
+mei                    86597  1 mei_me
+snd                    75905  18 snd_hda_codec_realtek,snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_pcm,snd_seq,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel,snd_seq_device
+soundcore              14491  2 snd,snd_hda_codec
+tpm                    35153  2 tpm_tis,tpm_infineon
+binfmt_misc            17431  1 
+dm_crypt               23177  1 
+i915                  904304  3 
+i2c_algo_bit           13257  1 i915
+drm_kms_helper         58041  1 i915
+drm                   291361  5 i915,drm_kms_helper
+crct10dif_pclmul       14307  0 
+crc32_pclmul           13133  0 
+crc32c_intel           22094  0 
+ghash_clmulni_intel    13230  0 
+r8169                  71694  0 
+mii                    13527  1 r8169
+i2c_core               55486  7 drm,i915,i2c_i801,drm_kms_helper,i2c_algo_bit,v4l2_common,videodev
+video                  19777  2 i915,samsung_laptop
